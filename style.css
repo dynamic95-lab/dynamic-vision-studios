@@ -1,0 +1,1202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b0a3d, #120017);
+  font-family: 'Poppins', sans-serif;
+  color: #d4af37;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  margin-top: 70px;
+  text-align: center;
+  animation: fadeDown 1.2s ease-out;
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.header-line {
+  width: 120px;
+  height: 1.5px;
+  background-color: #d4af37;
+  margin: 18px auto 0;
+  border-radius: 2px;
+  opacity: 0.85;
+}
+.header-line {
+  animation: fadeIn 1.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.85; }
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: rem;
+  margin-top:10x;
+  margin-bottom:20x;
+  font-style: italic;
+  font-size: 3rem;
+  color: #f1d78a;
+}
+
+
+/* Main Buttons */
+.main-buttons {
+  margin-top: 100px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-buttons button {
+  background: transparent;
+  border: 3px solid #d4af37;
+  color: #d4af37;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.pricing-section {
+  margin-top: 120px;   /* space from header */
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+.pricing-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.pricing-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(212,175,55,0.75);
+  margin-bottom: 60px;
+}
+
+.price-card {
+  border: 1.8px solid #d4af37;
+  border-radius: 25px;
+  padding: 35px 28px;   /* more breathing room */
+  width: 260px;
+  transition: all 0.3s ease;
+}
+
+
+.price-card {
+  border: 1.8px solid #d4af37;
+  border-radius: 25px;
+  padding: 30px 25px;
+  width: 260px;
+  transition: all 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(212,175,55,0.35);
+}
+
+.price-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.price-card ul li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.price-btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 10px 22px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.price-btn:hover {
+  background: #d4af37;
+  color: #2b0a3d;
+}
+
+/* Highlight middle package */
+.price-card.featured {
+  background: rgba(212,175,55,0.08);
+  transform: scale(1.05);
+}
+
+
+.main-buttons button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Base button style */
+.main-buttons .nav-btn {
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 1rem;
+  display: inline-block;          /* IMPORTANT */
+  transition: all 0.3s ease;
+}
+
+/* Hover lift effect */
+.main-buttons .nav-btn:hover {
+  background: #d4af37;
+  color: #2b0a3d;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(212, 175, 55, 0.4);
+}
+
+
+
+/* Bottom Buttons */
+.footer-buttons {
+  margin-top: auto;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 25px;
+}
+
+.footer-buttons button {
+  background: transparent;
+  border: 1.5px solid #d4af37;
+  color: #d4af37;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-buttons button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.footer-buttons button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(237, 206, 101, 0.3);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;           /* FORCE bottom-right */
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 99999;
+  overflow: visible;     /* VERY IMPORTANT */
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+/* FORCE WHATSAPP FLOAT FIX */
+a.whatsapp-float {
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px !important;
+  left: auto !important;
+  top: auto !important;
+  width: 60px !important;
+  height: 60px !important;
+  background: #25D366 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 999999 !important;
+  overflow: visible !important;
+}
+
+a.whatsapp-float img {
+  width: 32px !important;
+  height: 32px !important;
+  display: block !important;
+}
+/* FORCE pricing cards to align horizontally */
+.studio-pricing {
+  display: flex;
+  flex-direction: row;     /* 🔑 FORCE SIDE-BY-SIDE */
+  align-items: stretch;
+  gap: 14px;
+  width: 60%;
+}
+.home-fixed {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  z-index: 999999;
+
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d4af37;
+  border: 1.5px solid #d4af37;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+.home-fixed:hover {
+  background: #d4af37;
+  color: #2b0a3d;
+  transform: translateY(-2px);
+}
+.quick-nav {
+  position: fixed;
+  top: 20px;
+  left: 90px;           /* sits right after Home */
+  display: flex;
+  gap: 12px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+
+  padding: 8px 14px;
+  border-radius: 40px;
+
+  z-index: 999998;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+.quick-nav .nav-link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: rgba(212,175,55,0.55);   /* faded */
+  padding: 6px 14px;
+  border-radius: 20px;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.quick-nav .nav-link:hover {
+  color: #d4af37;
+}
+
+/* ACTIVE PAGE */
+.quick-nav .nav-link.active {
+  color: #2b0a3d;
+  background: #d4af37;
+  box-shadow: 0 6px 16px rgba(212,175,55,0.45);
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .quick-nav {
+    top: 75px;
+    left: 20px;
+    flex-wrap: wrap;
+  }
+}
+.floating-nav {
+  position: fixed;
+  top: 22px;
+  left: 50%;                     /* center horizontally */
+  transform: translateX(-50%);   /* exact center */
+
+  display: flex;
+  gap: 12px;
+
+  z-index: 999999;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+
+  padding: 10px 18px;
+  border-radius: 40px;
+
+  border: 1.5px solid rgba(212,175,55,0.45);   /* 🔑 border */
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* BASE BUTTON */
+.float-btn {
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: rgba(212,175,55,0.45);
+  border: 1.2px solid rgba(212,175,55,0.35);
+
+  padding: 7px 18px;
+  border-radius: 24px;
+
+  background: transparent;
+  transition: all 0.25s ease;
+}
+/* HOVER */
+.float-btn:hover {
+  background: #d4af37;
+  color: #2b0a3d;
+  border-color: #d4af37;
+  box-shadow: 0 10px 26px rgba(212,175,55,0.65);
+  transform: translateY(-2px);
+}
+/* ACTIVE PAGE */
+.float-btn.active {
+  color: #d4af37;
+  border-color: rgba(212,175,55,0.85);
+
+  background: rgba(212,175,55,0.08);   /* 🔑 subtle fill */
+  box-shadow: inset 0 0 0 1px rgba(212,175,55,0.25);
+
+  font-weight: 400; /* same as others */
+  position: relative;
+}
+.float-btn.active {
+  position: relative;
+}
+.float-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 2px;
+  background: #d4af37;
+  border-radius: 2px;
+}
+/* =========================
+   WEDDINGS PAGE
+========================= */
+
+.weddings-intro {
+  max-width: 720px;
+  margin: 60px auto 100px;
+  text-align: center;
+  line-height: 1.7;
+  padding: 0 20px;
+}
+/* GALLERY GRID */
+.weddings-gallery {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto 140px;
+}
+
+/* TEMP PLACEHOLDER CARDS */
+.gallery-placeholder {
+  height: 260px;
+  border-radius: 22px;
+  border: 1.5px solid rgba(212,175,55,0.55);
+  background: rgba(212,175,55,0.05);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(212,175,55,0.6);
+
+  transition: all 0.3s ease;
+}
+
+.gallery-placeholder:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(212,175,55,0.35);
+  background: rgba(212,175,55,0.12);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .weddings-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .weddings-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   WEDDING PACKAGES
+========================= */
+
+.wedding-packages {
+  width: 85%;
+  margin: 80px auto 140px;
+  text-align: center;
+}
+
+.packages-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.package-card {
+  border: 1.5px solid rgba(212,175,55,0.6);
+  border-radius: 26px;
+  padding: 34px 26px;
+  background: rgba(212,175,55,0.05);
+  transition: all 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(212,175,55,0.35);
+}
+
+/* FEATURED (PREMIUM) */
+.package-card.featured {
+  background: rgba(212,175,55,0.12);
+  transform: scale(1.05);
+}
+
+/* TEXT */
+.package-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.package-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.package-card ul {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.package-card ul li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+/* BUTTON */
+.package-btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 10px 24px;
+  border-radius: 26px;
+  transition: all 0.3s ease;
+}
+.package-btn:hover {
+  background: #d4af37;
+  color: #2b0a3d;
+  box-shadow: 0 10px 26px rgba(212,175,55,0.6);
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-card.featured {
+    transform: scale(1);
+  }
+}
+/* =========================
+   PAGE HERO (ALL PAGES)
+========================= */
+
+.page-hero {
+  margin-top: 220px;   /* pushes content below floating nav */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 0.95rem;
+  color: rgba(212,175,55,0.8);
+}
+/* GLOBAL PAGE OFFSET FOR FIXED NAV */
+.page-wrapper {
+  padding-top: 200px; /* space for floating nav */
+}
+section {
+  position: relative;
+}
+/* ===== HOME BACKGROUND IMAGE SLIDER (NO LAYOUT CHANGES) ===== */
+
+.bg-slider {
+  position: relative;
+  min-height: 85vh;
+  background-size: cover;
+  background-position: center;
+  animation: randomBG 40s infinite;
+}
+
+/* Dark overlay to keep text readable */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* Ensure existing text stays above background */
+.header h1,
+.header p,
+.header .header-line {
+  position: relative;
+  z-index: 1;
+}
+
+/* Randomized background sequence */
+@keyframes randomBG {
+  0%   { background-image: url("images/bg1.jpg"); }
+  12%  { background-image: url("images/bg5.jpg"); }
+  25%  { background-image: url("images/bg3.jpg"); }
+  37%  { background-image: url("images/bg8.jpg"); }
+  50%  { background-image: url("images/bg2.jpg"); }
+  62%  { background-image: url("images/bg6.jpg"); }
+  75%  { background-image: url("images/bg4.jpg"); }
+  87%  { background-image: url("images/bg7.jpg"); }
+  100% { background-image: url("images/bg1.jpg"); }
+}
+/* ===== FIX FULL-WIDTH HERO BACKGROUND ===== */
+
+.header {
+  width: 100vw;
+  min-height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background slider */
+.bg-slider {
+  background-size: cover;
+  background-position: center;
+  animation: randomBG 40s infinite;
+}
+
+/* Dark overlay */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Keep text centered and readable */
+.header-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Background animation */
+@keyframes randomBG {
+  0%   { background-image: url("images/bg1.jpg"); }
+  12%  { background-image: url("images/bg5.jpg"); }
+  25%  { background-image: url("images/bg3.jpg"); }
+  37%  { background-image: url("images/bg8.jpg"); }
+  50%  { background-image: url("images/bg2.jpg"); }
+  62%  { background-image: url("images/bg6.jpg"); }
+  75%  { background-image: url("images/bg4.jpg"); }
+  87%  { background-image: url("images/bg7.jpg"); }
+  100% { background-image: url("images/bg1.jpg"); }
+}
+/* Title positioning: top with space, centered */
+/* Fix horizontal centering ONLY — keep existing height */
+.header-content {
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+}
+/* Main buttons centered and visible */
+.main-buttons {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  z-index: 3;
+}
+/* Ensure header background stays behind buttons */
+.header {
+  z-index: 1;
+}
+
+.bg-overlay {
+  z-index: 1;
+}
+/* Move title down by 15px only */
+.header-content {
+  margin-top: 30px;
+}
+/* Move main buttons up by 30px */
+.main-buttons {
+  margin-top: -15px;
+}
+/* Move footer buttons up by 15px */
+.footer-buttons {
+  bottom: calc(25px + 15px);
+}
+/* Force title to be perfectly centered left ↔ right */
+.header-content {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+/* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Header height adjustment */
+  .header {
+    min-height: 100vh;
+  }
+
+  /* Title & tagline scaling */
+  .brand {
+    font-size: 1.8rem;
+    padding: 0 15px;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+    padding: 0 20px;
+  }
+
+  /* Keep title centered horizontally */
+  .header-content {
+    width: 100%;
+  }
+
+  /* Stack main buttons neatly */
+  .main-buttons {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+
+  /* Footer buttons stack nicely */
+  .footer-buttons {
+    position: relative;
+    bottom: auto;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* WhatsApp button stays fixed */
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+/* ===== STUDIO PAGE LAYOUT ONLY ===== */
+
+/* Gallery: 6 photos, clean grid */
+.studio-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.studio-gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Pricing cards in one straight line */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+/* ===== STUDIO GALLERY: 2 ROWS (3 x 2), LANDSCAPE ===== */
+
+.studio-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px); /* controls height */
+  gap: 16px;
+
+  max-width: 1100px;
+  margin: 30px auto 20px;
+  padding: 0 20px;
+}
+
+/* Force landscape crop, prevent tall portraits */
+.studio-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Remove default margin from the title */
+.header .brand {
+  margin-bottom: 20px;
+}
+
+/* Remove any top margin on the gallery */
+.studio-gallery {
+  margin-top: 0;
+}
+/* ===== FIX STUDIO PAGE HEADER HEIGHT ===== */
+
+/* Override hero height ONLY on studio page */
+body:not(.home-page) .header {
+  min-height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* Exact spacing between title and gallery */
+.header .brand {
+  margin-bottom: 20px;
+}
+
+.studio-gallery {
+  margin-top: 0;
+}
+/* ===== WEDDINGS PAGE LAYOUT ===== */
+
+.page-hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.weddings-intro {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* 2 rows × 3 columns, landscape feel */
+.weddings-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 16px;
+
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.weddings-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Packages in one line */
+.packages-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.packages-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+/* ===== FORCE WEDDINGS GALLERY TO SHOW ===== */
+.weddings-gallery {
+  position: relative;
+  z-index: 5;
+}
+/* Prevent hero from overlapping gallery */
+.page-hero {
+  position: relative;
+  z-index: 2;
+}
+/* ===== FINAL FIX: FORCE INNER PAGES TO FLOW NORMALLY ===== */
+
+body.inner-page {
+  overflow: visible !important;
+  position: static !important;
+}
+
+body.inner-page * {
+  position: relative;
+}
+
+/* Ensure gallery is visible */
+body.inner-page .weddings-gallery {
+  display: grid !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+/* ===== FIX INNER PAGES FLEX ISSUE ===== */
+
+body.inner-page {
+  display: block;          /* disable flex on inner pages */
+  align-items: initial;
+}
+/* ===== FINAL GUARANTEED FIX FOR INNER PAGES ===== */
+
+body.inner-page {
+  display: block;
+}
+
+/* Force inner-page sections to have width */
+body.inner-page section {
+  width: 100%;
+}
+
+/* Explicitly force gallery width */
+body.inner-page .weddings-gallery {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ===== FINAL DEFINITIVE FIX FOR WEDDINGS GALLERY ===== */
+body.inner-page .weddings-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 16px;
+
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+/* FIX HOME FOOTER LINKS TO LOOK LIKE BUTTONS */
+.footer-buttons a {
+  text-decoration: none;
+  background: transparent;
+  border: 1.5px solid #d4af37;
+  color: #d4af37;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: inline-block;
+}
+
+.footer-buttons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(237, 206, 101, 0.3);
+}
+.site-footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+.site-footer a {
+  color: gold;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid gold;
+}
+
+.site-footer a:hover {
+  opacity: 0.7;
+}
+.site-footer h2 {
+  color: gold;
+  margin-bottom: 15px;
+}
+
+.site-footer p {
+  margin: 6px 0;
+}
+
+.site-footer a {
+  color: gold;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  opacity: 0.75;
+}
+/* Tighten spacing between About, Why Us, and Contact */
+.about-section,
+.why-section,
+.site-footer {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Reduce paragraph spacing inside these sections */
+.about-section p,
+.why-section p,
+.site-footer p {
+  margin: 6px 0;
+}
+
+/* Reduce title spacing */
+.about-section h2,
+.why-section h2,
+.site-footer h2 {
+  margin-bottom: 10px;
+}
+/* =========================
+   HOME PAGE RESPONSIVE
+   ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .home-page .header,
+  .home-page .hero {
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .home-page h1 {
+    font-size: 2.4rem;
+  }
+
+  .home-page .tagline {
+    font-size: 1.1rem;
+  }
+
+  .home-page .nav-buttons,
+  .home-page .service-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+}
+
+/* Phones */
+@media (max-width: 768px) {
+
+  .home-page {
+    overflow-x: hidden;
+  }
+
+  .home-page h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+
+  .home-page .tagline {
+    font-size: 0.95rem;
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  .home-page .header,
+  .home-page .hero {
+    padding: 60px 15px;
+  }
+
+  .home-page .nav-buttons,
+  .home-page .service-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-page .nav-buttons a,
+  .home-page .service-buttons a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* Background video / image */
+  .home-page video,
+  .home-page .bg-video {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .home-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-page .tagline {
+    font-size: 0.85rem;
+  }
+
+}
+/* =========================
+   HOME PAGE MOBILE FIX
+   ========================= */
+
+/* Phones & small tablets */
+@media (max-width: 768px) {
+
+  /* Remove side squeezing */
+  body.home-page {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* Header full width */
+  .home-page .header {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Center hero content */
+  .home-page .header-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Title scaling */
+  .home-page .header-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .home-page .header-content p {
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+
+  /* BUTTON SECTION */
+  .home-page .main-buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 12px;
+  }
+
+  .home-page .main-buttons a {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+
+  .home-page .header-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-page .header-content p {
+    font-size: 0.8rem;
+  }
+
+}
+
+
+
+
+
+
+

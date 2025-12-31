@@ -1,0 +1,241 @@
+/* ===== BASE STYLES (USED EVERYWHERE) ===== */
+* 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2b0a3d, #120017);
+  color: #d4af37;
+}
+
+/* Floating Navigation */
+.floating-nav {
+  position: fixed;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  padding: 10px 18px;
+  border-radius: 40px;
+}
+
+.float-btn {
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(212,175,55,0.6);
+  border: 1px solid rgba(212,175,55,0.4);
+  padding: 7px 18px;
+  border-radius: 24px;
+  transition: 0.3s ease;
+}
+
+.float-btn:hover {
+  background: #d4af37;
+  color: #2b0a3d;
+}
+
+.float-btn.active {
+  color: #d4af37;
+  border-color: #d4af37;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.whatsapp-float img {
+  width: 32px;
+}
+/* ===== SIGNATURE BUTTON DESIGN (RESTORED) ===== */
+
+/* Base button look */
+.nav-btn,
+.float-btn,
+.price-btn,
+.package-btn {
+  text-decoration: none;
+  background: transparent;
+  border: 2.5px solid #d4af37;        /* strong gold frame */
+  color: #d4af37;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Hover: luxury lift + glow */
+.nav-btn:hover,
+.float-btn:hover,
+.price-btn:hover,
+.package-btn:hover {
+  background: #d4af37;
+  color: #2b0a3d;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 26px rgba(212, 175, 55, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+
+  border-color: #f1d78a;
+}
+
+/* Active / current page button */
+.float-btn.active {
+  background: rgba(212, 175, 55, 0.12);
+  color: #d4af37;
+  border-color: #d4af37;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(212, 175, 55, 0.35),
+    0 6px 18px rgba(212, 175, 55, 0.35);
+
+  font-weight: 500;
+}
+
+/* Subtle underline accent for active nav */
+.float-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 2px;
+  background: #d4af37;
+  border-radius: 2px;
+}
+/* ===== FORCE BUTTON STYLE OVERRIDE ===== */
+
+a.nav-btn,
+a.float-btn,
+a.price-btn,
+a.package-btn,
+button {
+  background: transparent !important;
+  border: 2.5px solid #d4af37 !important;
+  color: #d4af37 !important;
+  padding: 12px 26px !important;
+  border-radius: 30px !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s ease !important;
+}
+
+a.nav-btn:hover,
+a.float-btn:hover,
+a.price-btn:hover,
+a.package-btn:hover,
+button:hover {
+  background: #d4af37 !important;
+  color: #2b0a3d !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 28px rgba(212,175,55,0.6) !important;
+}
+/* ================================
+   GLOBAL BUTTON SYSTEM
+================================ */
+
+.nav-btn,
+.float-btn,
+.page-btn {
+  text-decoration: none;
+  background: transparent;
+  border: 2.5px solid #d4af37;
+  color: #d4af37;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ================================
+   NAV BUTTON SYSTEM (FINAL)
+================================ */
+
+/* NORMAL */
+.float-btn {
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: rgba(212,175,55,0.55);
+  border: 1.5px solid rgba(212,175,55,0.35);
+  background: transparent;
+
+  padding: 7px 18px;
+  border-radius: 24px;
+
+  transition: all 0.25s ease;
+}
+
+/* HOVER (temporary) */
+.float-btn:hover {
+  background: rgba(212,175,55,0.85);
+  color: #2b0a3d;
+  border-color: #d4af37;
+
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212,175,55,0.45);
+}
+
+/* ACTIVE (persistent & DISTINCT) */
+.float-btn.active {
+  background: #d4af37;
+  color: #2b0a3d;
+  border-color: #f1d78a;
+
+  font-weight: 600;
+  transform: scale(1.05);
+
+  box-shadow:
+    0 10px 25px rgba(212,175,55,0.65),
+    inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+
+/* ACTIVE should not move on hover */
+.float-btn.active:hover {
+  transform: scale(1.05);
+}
+

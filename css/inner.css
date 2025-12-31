@@ -1,0 +1,415 @@
+/* ================================
+   INNER PAGES – SHARED DESIGN
+================================ */
+
+/* Page wrapper */
+.inner-page {
+  padding-top: 140px; /* space for floating nav */
+}
+
+/* Page header */
+.page-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #f1d78a;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 0.9rem;
+  color: rgba(212,175,55,0.75);
+}
+
+/* Intro text */
+.page-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  line-height: 1.7;
+  padding: 0 20px;
+}
+
+/* Image gallery (used everywhere) */
+.page-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 220px);
+  gap: 18px;
+
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.page-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.page-gallery img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(212,175,55,0.35);
+}
+
+/* Packages / cards section */
+.page-section {
+  max-width: 1100px;
+  margin: 0 auto 120px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #f1d78a;
+}
+
+/* Cards grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.card {
+  border: 1.5px solid rgba(212,175,55,0.6);
+  border-radius: 26px;
+  padding: 34px 26px;
+  background: rgba(212,175,55,0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(212,175,55,0.35);
+}
+
+.card.featured {
+  background: rgba(212,175,55,0.12);
+  transform: scale(1.05);
+}
+
+/* Card text */
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style: none;
+  margin-bottom: 26px;
+}
+
+.card ul li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card.featured {
+    transform: scale(1);
+  }
+}
+.page-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* show full image, no head cut */
+  border-radius: 18px;
+}
+.booking-note {
+  font-size: 14px;
+  margin: 10px 0 20px;
+  color: #f1c40f;
+}
+.page-btn {
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+  background: gold;
+  color: #4b0082;
+  box-shadow: 0 8px 20px rgba(241,196,15,0.6);
+  transform: translateY(-3px);
+}
+/* Ensure sections stack correctly */
+.page-section {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  margin-top: 40px;
+}
+
+.page-gallery {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+.page-section-title,
+.booking-note {
+  position: relative;
+  z-index: 3;
+}
+.card-grid {
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+.page-gallery {
+  margin-bottom: 120px; /* hard separation */
+}
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+
+  .floating-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .page-subtitle {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Phones (<= 768px) */
+@media (max-width: 768px) {
+
+  body.inner-page {
+    padding: 0 12px;
+  }
+
+  .floating-nav {
+    position: relative;
+    top: auto;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .float-btn {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
+  .page-hero {
+    padding: 60px 15px;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .page-intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .page-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .page-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+/* Small phones (<= 480px) */
+@media (max-width: 480px) {
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .page-gallery {
+    grid-template-columns: 1fr;
+  }
+
+}
+.review-text {
+  max-width: 600px;
+  margin: 15px auto 30px;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  text-align: center;   /* ✅ THIS IS THE FIX */
+}
+/* FORCE CENTER REVIEW MESSAGE */
+.review-cta,
+.review-cta * {
+  text-align: center !important;
+}
+/* BLOG PAGE IMAGE CONTROL */
+body.inner-page .page-section .card img {
+  width: 100%;
+  height: 200px;          /* controls image size */
+  object-fit: cover;      /* crops nicely */
+  border-radius: 12px;
+}
+body.inner-page .card-grid .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+/* BLOG CARD IMAGE – SMALLER & FACE-SAFE */
+body.inner-page .card-grid .card img {
+  width: 100%;
+  height: 140px;            /* 👈 SMALLER */
+  object-fit: contain;     /* 👈 NO FACE CUT */
+  background: #000;        /* fills empty space nicely */
+  border-radius: 12px;
+  display: block;
+}
+@media (max-width: 480px) {
+  body.inner-page .card-grid .card img {
+    height: 120px;
+  }
+}
+/* BLOG IMAGE SIZE CONTROL */
+.blog-image {
+  width: 100%;
+  max-height: 280px; /* adjust if needed */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .blog-image {
+    max-height: 200px;
+  }
+}
+.card img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.blog-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.blog-card {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.blog-card h3 {
+  margin-bottom: 12px;
+  color: #6a0dad; /* Purple theme */
+}
+
+.blog-card p {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.booking-note {
+  background: linear-gradient(135deg, #6a0dad, #b8860b);
+  color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.05rem;
+  margin-top: 40px;
+}
+.intro-text {
+  font-size: 1.15rem;
+  color: #222;              /* DARK, readable */
+  background: #f9f9f9;      /* Light contrast */
+  padding: 20px 25px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  line-height: 1.9;
+}
