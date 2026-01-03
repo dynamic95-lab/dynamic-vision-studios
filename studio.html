@@ -78,10 +78,14 @@
         <li>10 edited photos</li>
         <li>2 outfit</li>
       </ul>
-      <a
+    <a
   href="https://wa.me/254768833753?text=Hello%20Dynamic%20Vision%20Studios,%0AI%20would%20like%20to%20book%20the%20STUDIO%20BASIC%20PACKAGE.%0APrice:%20Ksh%205,000%0AIncludes:%2030-minute%20session,%2010%20edited%20photos,%201%20outfit.%0AI%20understand%20a%20BOOKING%20FEE%20is%20required%20to%20confirm%20availability.%0APreferred%20date:%0APreferred%20time:"
   class="page-btn"
-  target="_blank">
+  target="_blank"
+  onclick="gtag('event', 'whatsapp_book_now_click', {
+    event_category: 'conversion',
+    event_label: 'Studio Basic Package'
+  });">
   Book Basic
 </a>
     </div>
@@ -94,10 +98,14 @@
         <li>25 edited photos</li>
         <li>4 outfits</li>
       </ul>
-      <a
+   <a
   href="https://wa.me/254768833753?text=Hello%20Dynamic%20Vision%20Studios,%0AI%20would%20like%20to%20book%20the%20STUDIO%20STANDARD%20PACKAGE.%0APrice:%20Ksh%2010,000%0AIncludes:%201-hour%20session,%2025%20edited%20photos,%202%20outfits.%0AI%20understand%20a%20BOOKING%20FEE%20is%20required%20to%20confirm%20availability.%0APreferred%20date:%0APreferred%20time:"
   class="page-btn"
-  target="_blank">
+  target="_blank"
+  onclick="gtag('event', 'whatsapp_book_now_click', {
+    event_category: 'conversion',
+    event_label: 'Studio Standard Package'
+  });">
   Book Standard
 </a>
 
@@ -111,10 +119,14 @@
         <li>40 edited photos</li>
         <li>4 to 10 Outfits</li>
       </ul>
-      <a
+   <a
   href="https://wa.me/254768833753?text=Hello%20Dynamic%20Vision%20Studios,%0AI%20would%20like%20to%20book%20the%20STUDIO%20PREMIUM%20PACKAGE.%0APrice:%20Ksh%2018,000%0AIncludes:%202-hour%20session,%2040%20edited%20photos,%20Unlimited%20outfits.%0AI%20understand%20a%20BOOKING%20FEE%20is%20required%20to%20confirm%20availability.%0APreferred%20date:%0APreferred%20time:"
   class="page-btn"
-  target="_blank">
+  target="_blank"
+  onclick="gtag('event', 'whatsapp_book_now_click', {
+    event_category: 'conversion',
+    event_label: 'Studio Premium Package'
+  });">
   Book Premium
 </a>
 
@@ -124,8 +136,13 @@
 </section>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/254768833753" class="whatsapp-float" target="_blank">
-  <img src="images/whatsapp.svg.webp" alt="WhatsApp">
+<a href="https://wa.me/254768833753"
+   class="whatsapp-float"
+   onclick="gtag('event', 'whatsapp_floating_click', {
+     event_category: 'conversion',
+     event_label: 'Floating WhatsApp Button'
+   });">
+  <img src="images/whatsapp.svg.webp">
 </a>
 
 </body>

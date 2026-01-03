@@ -109,10 +109,14 @@ We don’t just capture moments — we elevate them.
 
   <p>
     💬 WhatsApp:
-    <a href="https://wa.me/254768833753" target="_blank">
-      Chat on WhatsApp
-    </a>
-  </p>
+  <a href="https://wa.me/254768833753"
+   class="whatsapp-float"
+   onclick="gtag('event', 'whatsapp_floating_click', {
+     event_category: 'conversion',
+     event_label: 'Floating WhatsApp Button'
+   });">
+  <img src="images/whatsapp.svg.webp">
+</a>
 
   <p>
     📧 Email:

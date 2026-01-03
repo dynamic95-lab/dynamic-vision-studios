@@ -127,8 +127,13 @@
 
   </div>
 </section>
-<a href="https://wa.me/254768833753" class="whatsapp-float" target="_blank">
-  <img src="images/whatsapp.svg.webp" alt="WhatsApp">
+<a href="https://wa.me/254768833753"
+   class="whatsapp-float"
+   onclick="gtag('event', 'whatsapp_floating_click', {
+     event_category: 'conversion',
+     event_label: 'Floating WhatsApp Button'
+   });">
+  <img src="images/whatsapp.svg.webp">
 </a>
 
 </body>

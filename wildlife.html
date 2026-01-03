@@ -86,11 +86,16 @@
         <li>Professional zoom lenses & HQ cameras</li>
       </ul>
       <a
-        href="https://wa.me/254768833753?text=Hello%20Dynamic%20Vision%20Studios,%0AI%20would%20like%20to%20book%20the%20SIMBA%20WILDLIFE%20PACKAGE.%0APrice:%20Ksh%2030,000%20per%20day.%0ANote:%20Food%20and%20accommodation%20are%20NOT%20included.%0APreferred%20date:%0APreferred%20location:"
-        class="page-btn"
-        target="_blank">
-        Book Simba
-      </a>
+  href="https://wa.me/254768833753?text=Hello%20Dynamic%20Vision%20Studios,%0AI%20would%20like%20to%20book%20the%20SIMBA%20WILDLIFE%20PACKAGE.%0APrice:%20Ksh%2030,000%20per%20day.%0ANote:%20Food%20and%20accommodation%20are%20NOT%20included.%0APreferred%20date:%0APreferred%20location:"
+  class="page-btn"
+  target="_blank"
+  onclick="gtag('event', 'whatsapp_book_now_click', {
+    event_category: 'conversion',
+    event_label: 'Simba Wildlife Package'
+  });">
+  Book Simba
+</a>
+
     </div>
 
     <!-- NDOVU -->
@@ -104,19 +109,29 @@
         <li>Professional zoom lenses & HQ cameras</li>
       </ul>
       <a
-        href="https://wa.me/254768833753?text=Hello%20Dynamic%20Vision%20Studios,%0AI%20would%20like%20to%20book%20the%20NDOVU%20WILDLIFE%20PACKAGE.%0APrice:%20Ksh%2070,000%20per%20day.%0ANote:%20Food%20and%20accommodation%20are%20NOT%20included.%0APreferred%20date:%0APreferred%20location:"
-        class="page-btn"
-        target="_blank">
-        Book Ndovu
-      </a>
+  href="https://wa.me/254768833753?text=Hello%20Dynamic%20Vision%20Studios,%0AI%20would%20like%20to%20book%20the%20NDOVU%20WILDLIFE%20PACKAGE.%0APrice:%20Ksh%2070,000%20per%20day.%0ANote:%20Food%20and%20accommodation%20are%20NOT%20included.%0APreferred%20date:%0APreferred%20location:"
+  class="page-btn"
+  target="_blank"
+  onclick="gtag('event', 'whatsapp_book_now_click', {
+    event_category: 'conversion',
+    event_label: 'Ndovu Wildlife Package'
+  });">
+  Book Ndovu
+</a>
+
     </div>
 
   </div>
 </section>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/254768833753" class="whatsapp-float" target="_blank">
-  <img src="images/whatsapp.svg.webp" alt="WhatsApp">
+<a href="https://wa.me/254768833753"
+   class="whatsapp-float"
+   onclick="gtag('event', 'whatsapp_floating_click', {
+     event_category: 'conversion',
+     event_label: 'Floating WhatsApp Button'
+   });">
+  <img src="images/whatsapp.svg.webp">
 </a>
 
 </body>
