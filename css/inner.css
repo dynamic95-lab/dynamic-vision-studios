@@ -74,14 +74,6 @@
   margin-bottom: 50px;
   color: #f1d78a;
 }
-
-/* Cards grid */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
 /* Card */
 .card {
   border: 1.5px solid rgba(212,175,55,0.6);
@@ -176,72 +168,6 @@
 .booking-note {
   position: relative;
   z-index: 3;
-}
-.card-grid {
-  margin-top: 30px;
-  position: relative;
-  z-index: 2;
-}
-.page-gallery {
-  margin-bottom: 120px; /* hard separation */
-}
-/* =========================
-   RESPONSIVE DESIGN
-   ========================= */
-
-/* Tablets (<= 1024px) */
-@media (max-width: 1024px) {
-
-  .floating-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px;
-  }
-
-  .page-title {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-
-  .page-subtitle {
-    text-align: center;
-    max-width: 90%;
-    margin: auto;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-/* Phones (<= 768px) */
-@media (max-width: 768px) {
-
-  body.inner-page {
-    padding: 0 12px;
-  }
-
-  .floating-nav {
-    position: relative;
-    top: auto;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .float-btn {
-    padding: 8px 12px;
-    font-size: 0.75rem;
-  }
-
-  .page-hero {
-    padding: 60px 15px;
-  }
-
-  .page-title {
-    font-size: 1.8rem;
-  }
 
   .page-subtitle {
     font-size: 0.9rem;
@@ -256,7 +182,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-
   .card-grid {
     grid-template-columns: 1fr;
   }
@@ -276,9 +201,7 @@
   .page-btn {
     width: 100%;
     text-align: center;
-  }
-
-}
+  }}
 
 /* Small phones (<= 480px) */
 @media (max-width: 480px) {
@@ -412,4 +335,126 @@ body.inner-page .card-grid .card img {
   border-radius: 10px;
   margin-bottom: 35px;
   line-height: 1.9;
+}
+/* =========================
+   RESPONSIVE FIXES
+========================= */
+
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card.featured {
+    transform: scale(1);
+  }
+
+  body.inner-page {
+    padding: 0 12px;
+  }
+
+  .floating-nav {
+    position: relative;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .float-btn {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   PRICING / PACKAGE CARDS
+========================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+  margin-top: 30px;
+}
+
+.card {
+  position: relative;
+  border: 1.5px solid rgba(212,175,55,0.6);
+  border-radius: 26px;
+  padding: 34px 26px;
+  background: rgba(212,175,55,0.05);
+  height: auto;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(212,175,55,0.35);
+}
+
+.card.featured {
+  background: rgba(212,175,55,0.12);
+  transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card.featured {
+    transform: scale(1);
+  }
+}
+/* =========================
+   SAFE RESPONSIVE RULES
+========================= */
+
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card.featured {
+    transform: scale(1);
+  }
+
+  .page-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
