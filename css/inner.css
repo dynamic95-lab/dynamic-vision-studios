@@ -393,9 +393,10 @@ body.inner-page .card-grid .card img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  align-items: stretch;
+  align-items: start;   /* ✅ KEY FIX */
   margin-top: 30px;
 }
+
 
 .card {
   position: relative;
@@ -415,6 +416,14 @@ body.inner-page .card-grid .card img {
 .card.featured {
   background: rgba(212,175,55,0.12);
   transform: scale(1.05);
+}
+
+/* BLOG HUB – FORCE NORMAL FLOW */
+body.inner-page .card-grid .card {
+  position: relative;   /* overrides absolute if any */
+  top: auto;
+  bottom: auto;
+  margin-top: 0;
 }
 
 /* Tablet */
@@ -456,5 +465,306 @@ body.inner-page .card-grid .card img {
   .page-btn {
     width: 100%;
     text-align: center;
+  }
+}
+/* BLOG HUB – FIX FIRST CARD OVERLAP */
+body.inner-page .card-grid .card {
+  margin-top: 0 !important;
+  transform: none !important;
+}
+
+body.inner-page .card-grid .card:first-child {
+  margin-top: 0 !important;
+}
+/* ===============================
+   BLOG HUB – FORCE TRUE CARD FLOW
+   =============================== */
+
+/* Only affect blog hub cards */
+body.inner-page .card-grid > .card {
+  height: auto !important;
+  min-height: unset !important;
+  max-height: none !important;
+
+  display: block !important;
+  overflow: hidden;
+
+  margin-bottom: 0;
+}
+
+/* Prevent first card from swallowing next */
+body.inner-page .card-grid > .card:first-child {
+  margin-bottom: 28px;
+}
+
+/* Ensure grid does NOT merge rows */
+body.inner-page .card-grid {
+  grid-auto-rows: auto;
+  align-items: start;
+}
+/* ===============================
+   BLOG ARTICLE – RURACIO LAYOUT
+   =============================== */
+
+body.inner-page article {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  line-height: 1.8;
+}
+
+/* Main title */
+body.inner-page article h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+/* Section headings */
+body.inner-page article h2 {
+  font-size: 1.6rem;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+body.inner-page article h3 {
+  font-size: 1.3rem;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+body.inner-page article p {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Highlight / cultural note blocks */
+body.inner-page article blockquote {
+  border-left: 4px solid gold;
+  padding-left: 18px;
+  margin: 30px 0;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* Images inside article */
+body.inner-page article img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 30px 0;
+}
+
+/* Image captions (optional) */
+body.inner-page article figcaption {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  text-align: center;
+  margin-top: -15px;
+}
+
+/* Lists */
+body.inner-page article ul,
+body.inner-page article ol {
+  margin: 20px 0 20px 30px;
+}
+
+body.inner-page article li {
+  margin-bottom: 10px;
+}
+
+/* Call-to-action box */
+.blog-cta {
+  margin-top: 60px;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.blog-cta h3 {
+  margin-bottom: 15px;
+}
+
+.blog-cta .page-btn {
+  margin-top: 15px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  body.inner-page article {
+    padding: 30px 16px 60px;
+  }
+
+  body.inner-page article h1 {
+    font-size: 1.8rem;
+  }
+
+  body.inner-page article h2 {
+    font-size: 1.4rem;
+  }
+}
+body.inner-page article .article-gallery img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+body.inner-page article .article-gallery img {
+  width: 100%;
+  height: 220px;             /* 👈 SMALLER HEIGHT */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+body.inner-page article .article-gallery figcaption {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  body.inner-page article .article-gallery {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  body.inner-page article .article-gallery img {
+    height: 200px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  body.inner-page article .article-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  body.inner-page article .article-gallery img {
+    height: 240px;
+  }
+}
+/* OVERRIDE generic article img rules */
+body.inner-page article figure.article-gallery img {
+  width: 100% !important;
+  height: 160px !important;     /* 👈 HARD LIMIT */
+  max-height: 160px !important;
+  object-fit: cover !important;
+  border-radius: 10px;
+}
+
+/* Caption */
+body.inner-page article figure.article-gallery figcaption {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  body.inner-page article figure.article-gallery {
+    grid-template-columns: 1fr;
+    max-width: 92% !important;
+  }
+
+  body.inner-page article figure.article-gallery img {
+    height: 150px !important;
+  }
+}
+/* ===============================
+   BLOG ARTICLE – IMAGE GALLERY
+   =============================== */
+
+body.inner-page article figure.article-gallery {
+  max-width: 560px;
+  margin: 24px auto 36px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Override generic article image styling */
+body.inner-page article figure.article-gallery img {
+  margin: 0;                 /* cancels article img margin */
+  height: 140px;             /* SMALL & CONTROLLED */
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Caption */
+body.inner-page article figure.article-gallery figcaption {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  body.inner-page article figure.article-gallery {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+
+  body.inner-page article figure.article-gallery img {
+    height: 130px;
+  }
+}
+/* ===============================
+   RURACIO ARTICLE – IMAGE PAIR
+   =============================== */
+
+body.inner-page article .ruracio-image-pair {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+
+  max-width: 520px;
+  margin: 30px auto 10px;
+}
+
+body.inner-page article .ruracio-image-pair img {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+
+  object-fit: cover;
+  border-radius: 10px;
+
+  /* override global article img rules */
+  margin: 0 !important;
+  max-height: none !important;
+}
+
+/* Caption */
+body.inner-page article .image-caption {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 35px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  body.inner-page article .ruracio-image-pair {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  body.inner-page article .ruracio-image-pair img {
+    max-width: 100%;
+    height: 140px;
   }
 }
