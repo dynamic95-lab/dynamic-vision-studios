@@ -1,0 +1,27 @@
+body.outdoor-blog {
+  background: #F8FBF9;
+  color: #24332A;
+}
+
+.outdoor-blog .blog-meta {
+  color: #6C7A72;
+}
+
+.outdoor-blog .highlight {
+  background: #EEF4F0;
+}
+
+.outdoor-blog .blog-cta {
+  background: #FFFFFF;
+  border: 1px solid #DCE6E0;
+}
+/* Outdoor Blog CTA Button Hover */
+.outdoor-blog .blog-cta a {
+  color: #C9A66B;
+  border-color: #C9A66B;
+}
+
+.outdoor-blog .blog-cta a:hover {
+  background-color: #C9A66B;
+  color: #ffffff;
+}

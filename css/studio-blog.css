@@ -1,0 +1,27 @@
+body.studio-blog {
+  background: #FFFFFF;
+  color: #222222;
+}
+
+.studio-blog .blog-meta {
+  color: #777777;
+}
+
+.studio-blog .highlight {
+  background: #F5F5F5;
+}
+
+.studio-blog .blog-cta {
+  background: #FAFAFA;
+  border: 1px solid #E5E5E5;
+}
+/* Studio Blog CTA Button Hover */
+.studio-blog .blog-cta a {
+  color: #C9A66B;
+  border-color: #C9A66B;
+}
+
+.studio-blog .blog-cta a:hover {
+  background-color: #C9A66B;
+  color: #ffffff;
+}

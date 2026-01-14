@@ -1,0 +1,45 @@
+/* ======================================
+   Wedding Blog Theme (Light & Elegant)
+   Applies ONLY to wedding blogs
+   ====================================== */
+
+body.wedding-blog {
+  background-color: #FAFAF8;
+  color: #2B2B2B;
+}
+
+/* Meta text */
+.wedding-blog .blog-meta {
+  color: #8A8A8A;
+}
+
+/* Highlight block */
+.wedding-blog .highlight {
+  background: #FFF7F2;
+  border-left-color: #C9A66B;
+}
+
+/* CTA */
+.wedding-blog .blog-cta {
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+}
+
+.wedding-blog .blog-cta a {
+  color: #C9A66B;
+  border-color: #C9A66B;
+}
+
+.wedding-blog .blog-cta a:hover {
+  background: #C9A66B;
+  color: #FFFFFF;
+}
+
+/* Links */
+.wedding-blog a {
+  color: #C9A66B;
+}
+
+.wedding-blog a:hover {
+  text-decoration: underline;
+}

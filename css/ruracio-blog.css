@@ -1,0 +1,28 @@
+body.ruracio-blog {
+  background: #FFFDFC;
+  color: #3A2F2A;
+}
+
+.ruracio-blog .blog-meta {
+  color: #8C7A70;
+}
+
+.ruracio-blog .highlight {
+  background: #FBF1EC;
+  border-left-color: #B07A4A;
+}
+
+.ruracio-blog .blog-cta {
+  background: #FFFFFF;
+  border: 1px solid #E9DED6;
+}
+/* Ruracio Blog CTA Button Hover */
+.ruracio-blog .blog-cta a {
+  color: #C9A66B;
+  border-color: #C9A66B;
+}
+
+.ruracio-blog .blog-cta a:hover {
+  background-color: #C9A66B;
+  color: #ffffff;
+}
