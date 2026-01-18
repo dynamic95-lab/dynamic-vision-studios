@@ -238,4 +238,29 @@ body.blog {
   bottom: 18px;
   z-index: 999;
 }
+/* View Packages Button Hover Effect */
+.blog-cta a,
+.view-packages-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: transparent;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.blog-cta a:hover,
+.view-packages-btn:hover {
+  background-color: #C9A24D;
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(250, 5, 5, 0.15);
+}
 
