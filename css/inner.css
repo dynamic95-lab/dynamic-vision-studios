@@ -768,3 +768,8 @@ body.inner-page article .image-caption {
     height: 140px;
   }
 }
+/* Pull blog content up */
+.blog-container {
+  margin-top: 0;
+  padding-top: 0;
+}
